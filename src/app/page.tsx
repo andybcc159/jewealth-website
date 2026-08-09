@@ -36,6 +36,9 @@ const heroGradient =
 const ctaGradient =
   "radial-gradient(45% 60% at 90% 50%, color-mix(in srgb, var(--color-crimson) 14%, transparent), transparent), var(--color-cream-soft)";
 
+const servicesGradient =
+  "radial-gradient(50% 60% at 10% 0%, color-mix(in srgb, var(--color-tan) 45%, transparent), transparent), radial-gradient(45% 55% at 95% 100%, color-mix(in srgb, var(--color-crimson) 10%, transparent), transparent), linear-gradient(180deg, var(--color-cream-soft), var(--color-cream))";
+
 export default function Home() {
   const featured = getPortfolioItems().slice(0, 3);
   const heroImage = findImage("hero", "main");
@@ -96,7 +99,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="border-t border-tan-deep/20 px-6 py-24">
+      <section className="relative overflow-hidden border-t border-tan-deep/20 px-6 py-24">
+        <ParallaxBg background={servicesGradient} range={60} />
         <div className="mx-auto max-w-6xl">
           <Reveal>
             <h2 className="font-display max-w-2xl text-4xl font-semibold leading-tight text-ink md:text-6xl">
