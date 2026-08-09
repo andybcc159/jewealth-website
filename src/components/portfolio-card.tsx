@@ -76,13 +76,21 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
           <h3 className="mt-2 text-xl font-medium text-ink">{item.title}</h3>
           <p className="text-sm text-ink-soft">{item.titleThai}</p>
 
-          <div className="mt-4 flex items-center justify-between gap-3 border-t border-tan-deep/20 pt-3">
-            <span className="text-xs uppercase tracking-widest text-ink-soft/60">
-              {item.gemstone}
-            </span>
-            <span className="whitespace-nowrap text-sm font-medium text-crimson">
-              {item.startingPrice}
-            </span>
+          <div className="mt-4 space-y-2 border-t border-tan-deep/20 pt-3">
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="text-xs uppercase tracking-widest text-ink-soft/60">
+                Gemstone
+              </span>
+              <span className="text-sm text-ink">{item.gemstone}</span>
+            </div>
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="text-xs uppercase tracking-widest text-ink-soft/60">
+                Starting At
+              </span>
+              <span className="text-sm font-medium text-crimson">
+                {item.startingPrice}
+              </span>
+            </div>
           </div>
 
           <p className="mt-3 line-clamp-2 text-sm text-ink-soft">{item.description}</p>
