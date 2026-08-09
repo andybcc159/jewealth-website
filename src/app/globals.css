@@ -60,6 +60,14 @@ body {
   -webkit-backdrop-filter: blur(18px);
 }
 
+/* Soft white bloom for accent text sitting on the dark glass panel. */
+.text-glow {
+  text-shadow:
+    0 0 2px color-mix(in srgb, var(--color-cream) 95%, transparent),
+    0 0 14px color-mix(in srgb, var(--color-cream) 80%, transparent),
+    0 0 34px color-mix(in srgb, var(--color-cream) 50%, transparent);
+}
+
 body::after {
   content: "";
   position: fixed;
