@@ -37,7 +37,7 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{ rotateX, rotateY, transformPerspective: 900 }}
-        className="group elevate"
+        className="group elevate flex h-full flex-col bg-cream-soft"
       >
         <div className="relative aspect-[4/5] overflow-hidden bg-cream-soft">
           {cover ? (
@@ -69,19 +69,23 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
             transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }}
           />
         </div>
-        <div className="pt-4">
+        <div className="flex flex-1 flex-col px-5 py-5">
           <p className="text-xs uppercase tracking-widest text-crimson">
             {item.category} <span className="text-ink-soft/60">· {item.categoryThai}</span>
           </p>
-          <h3 className="text-xl font-medium text-ink">{item.title}</h3>
+          <h3 className="mt-2 text-xl font-medium text-ink">{item.title}</h3>
           <p className="text-sm text-ink-soft">{item.titleThai}</p>
-          <p className="mt-1 text-xs uppercase tracking-widest text-ink-soft/60">
-            {item.gemstone}
-          </p>
-          <p className="mt-2 text-sm font-medium text-ink">
-            Starting at <span className="text-crimson">{item.startingPrice}</span>
-          </p>
-          <p className="mt-2 text-sm text-ink-soft">{item.description}</p>
+
+          <div className="mt-4 flex items-center justify-between gap-3 border-t border-tan-deep/20 pt-3">
+            <span className="text-xs uppercase tracking-widest text-ink-soft/60">
+              {item.gemstone}
+            </span>
+            <span className="whitespace-nowrap text-sm font-medium text-crimson">
+              {item.startingPrice}
+            </span>
+          </div>
+
+          <p className="mt-3 line-clamp-2 text-sm text-ink-soft">{item.description}</p>
         </div>
       </motion.article>
     </Link>

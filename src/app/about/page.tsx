@@ -56,14 +56,14 @@ export default function AboutPage() {
         {storyImage && (
           <>
             <Image src={storyImage} alt="" fill priority className="-z-20 object-cover" />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10" />
+            <div className="photo-scrim absolute inset-0 -z-10" />
           </>
         )}
         <div className="mx-auto w-full max-w-4xl">
           <Reveal>
             <p
               className={`text-xs uppercase tracking-[0.3em] ${
-                storyImage ? "text-tan" : "text-crimson"
+                storyImage ? "text-scrim text-tan" : "text-crimson"
               }`}
             >
               About Us
@@ -71,7 +71,7 @@ export default function AboutPage() {
             <StaggerText
               as="h1"
               className={`font-display mt-4 block text-5xl font-semibold leading-[0.95] md:text-7xl ${
-                storyImage ? "text-cream" : "text-ink"
+                storyImage ? "text-scrim text-cream" : "text-ink"
               }`}
               text={`The story behind ${siteConfig.name}`}
             />

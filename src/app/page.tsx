@@ -53,7 +53,7 @@ export default function Home() {
               priority
               className="-z-20 object-cover"
             />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10" />
+            <div className="photo-scrim absolute inset-0 -z-10" />
           </>
         ) : (
           <ParallaxBg background={heroGradient} />
@@ -61,14 +61,14 @@ export default function Home() {
         <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-6 py-24">
           <p
             className={`text-xs uppercase tracking-[0.3em] ${
-              heroImage ? "text-tan" : "text-crimson"
+              heroImage ? "text-scrim text-tan" : "text-crimson"
             }`}
           >
             {siteConfig.tagline}
           </p>
           <h1
             className={`font-display max-w-4xl text-6xl font-semibold leading-[0.95] tracking-tight md:text-8xl ${
-              heroImage ? "text-cream" : "text-ink"
+              heroImage ? "text-scrim text-cream" : "text-ink"
             }`}
           >
             <StaggerText as="span" className="block" text="Jewelry that" />
@@ -78,7 +78,7 @@ export default function Home() {
             </span>
           </h1>
           <p
-            className={`max-w-md text-sm ${heroImage ? "text-cream/80" : "text-ink-soft"}`}
+            className={`max-w-md text-sm ${heroImage ? "text-scrim text-cream/80" : "text-ink-soft"}`}
           >
             {siteConfig.taglineThai}
           </p>
@@ -158,7 +158,7 @@ export default function Home() {
         {ctaImage ? (
           <>
             <Image src={ctaImage} alt="" fill className="-z-20 object-cover" />
-            <div className="absolute inset-0 -z-10 bg-ink/60" />
+            <div className="photo-scrim absolute inset-0 -z-10" />
           </>
         ) : (
           <ParallaxBg background={ctaGradient} range={80} />
@@ -166,7 +166,7 @@ export default function Home() {
         <Reveal className="mx-auto flex max-w-6xl flex-col items-start gap-8">
           <h2
             className={`font-display max-w-2xl text-4xl font-semibold leading-tight md:text-6xl ${
-              ctaImage ? "text-cream" : "text-ink"
+              ctaImage ? "text-scrim text-cream" : "text-ink"
             }`}
           >
             Let&rsquo;s create your piece.

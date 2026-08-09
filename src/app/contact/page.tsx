@@ -24,14 +24,14 @@ export default function ContactPage() {
         {headerImage && (
           <>
             <Image src={headerImage} alt="" fill priority className="-z-20 object-cover" />
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/55 to-ink/10" />
+            <div className="photo-scrim absolute inset-0 -z-10" />
           </>
         )}
         <div className="mx-auto w-full max-w-6xl">
           <Reveal>
             <p
               className={`text-xs uppercase tracking-[0.3em] ${
-                headerImage ? "text-tan" : "text-crimson"
+                headerImage ? "text-scrim text-tan" : "text-crimson"
               }`}
             >
               Contact
@@ -39,11 +39,11 @@ export default function ContactPage() {
             <StaggerText
               as="h1"
               className={`font-display mt-4 block text-5xl font-semibold leading-[0.95] md:text-7xl ${
-                headerImage ? "text-cream" : "text-ink"
+                headerImage ? "text-scrim text-cream" : "text-ink"
               }`}
               text="Let's talk"
             />
-            <p className={`mt-4 ${headerImage ? "text-cream/80" : "text-ink-soft"}`}>
+            <p className={`mt-4 ${headerImage ? "text-scrim text-cream/80" : "text-ink-soft"}`}>
               ยินดีให้คำปรึกษาเรื่องเครื่องประดับของคุณ
             </p>
           </Reveal>
