@@ -45,58 +45,53 @@ export default function Home() {
     <div>
       <section className="relative flex min-h-[600px] items-center overflow-hidden md:min-h-[760px]">
         {heroImage ? (
-          <>
-            <Image
-              src={heroImage}
-              alt=""
-              fill
-              priority
-              className="-z-20 object-cover"
-            />
-            <div className="photo-scrim absolute inset-0 -z-10" />
-          </>
+          <Image src={heroImage} alt="" fill priority className="-z-20 object-cover" />
         ) : (
           <ParallaxBg background={heroGradient} />
         )}
-        <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 px-6 py-24">
-          <p
-            className={`text-xs uppercase tracking-[0.3em] ${
-              heroImage ? "text-scrim text-tan" : "text-crimson"
+        <div className="mx-auto w-full max-w-6xl px-6 py-24">
+          <div
+            className={`flex max-w-2xl flex-col items-start gap-6 ${
+              heroImage ? "text-panel px-6 py-8 md:px-10 md:py-12" : ""
             }`}
           >
-            {siteConfig.tagline}
-          </p>
-          <h1
-            className={`font-display max-w-4xl text-6xl font-semibold leading-[0.95] tracking-tight md:text-8xl ${
-              heroImage ? "text-scrim text-cream" : "text-ink"
-            }`}
-          >
-            <StaggerText as="span" className="block" text="Jewelry that" />
-            <span className="block">
-              <StaggerText as="span" text="tells your" delay={0.15} />{" "}
-              <RotatingWord words={["story", "legacy", "identity"]} />
-            </span>
-          </h1>
-          <p
-            className={`max-w-md text-sm ${heroImage ? "text-scrim text-cream/80" : "text-ink-soft"}`}
-          >
-            {siteConfig.taglineThai}
-          </p>
-          <div className="flex flex-wrap items-center gap-5 pt-2">
-            <Link
-              href="/contact"
-              className="btn-glow inline-block bg-crimson px-8 py-3 text-sm tracking-wide text-cream"
-            >
-              Get in Touch
-            </Link>
-            <Link
-              href="/selectedworks"
-              className={`text-sm tracking-wide underline decoration-tan-deep underline-offset-4 hover:text-crimson ${
-                heroImage ? "text-cream/80" : "text-ink-soft"
+            <p
+              className={`text-xs uppercase tracking-[0.3em] ${
+                heroImage ? "text-tan" : "text-crimson"
               }`}
             >
-              View Selected Works →
-            </Link>
+              {siteConfig.tagline}
+            </p>
+            <h1
+              className={`font-display text-6xl font-semibold leading-[0.95] tracking-tight md:text-7xl ${
+                heroImage ? "text-cream" : "text-ink"
+              }`}
+            >
+              <StaggerText as="span" className="block" text="Jewelry that" />
+              <span className="block">
+                <StaggerText as="span" text="tells your" delay={0.15} />{" "}
+                <RotatingWord words={["story", "legacy", "identity"]} />
+              </span>
+            </h1>
+            <p className={`text-sm ${heroImage ? "text-cream/80" : "text-ink-soft"}`}>
+              {siteConfig.taglineThai}
+            </p>
+            <div className="flex flex-wrap items-center gap-5 pt-2">
+              <Link
+                href="/contact"
+                className="btn-glow inline-block bg-crimson px-8 py-3 text-sm tracking-wide text-cream"
+              >
+                Get in Touch
+              </Link>
+              <Link
+                href="/selectedworks"
+                className={`text-sm tracking-wide underline decoration-tan-deep underline-offset-4 hover:text-crimson ${
+                  heroImage ? "text-cream/80" : "text-ink-soft"
+                }`}
+              >
+                View Selected Works →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -156,27 +151,30 @@ export default function Home() {
 
       <section className="relative overflow-hidden border-t border-tan-deep/20 px-6 py-28">
         {ctaImage ? (
-          <>
-            <Image src={ctaImage} alt="" fill className="-z-20 object-cover" />
-            <div className="photo-scrim absolute inset-0 -z-10" />
-          </>
+          <Image src={ctaImage} alt="" fill className="-z-20 object-cover" />
         ) : (
           <ParallaxBg background={ctaGradient} range={80} />
         )}
-        <Reveal className="mx-auto flex max-w-6xl flex-col items-start gap-8">
-          <h2
-            className={`font-display max-w-2xl text-4xl font-semibold leading-tight md:text-6xl ${
-              ctaImage ? "text-scrim text-cream" : "text-ink"
+        <Reveal className="mx-auto max-w-6xl">
+          <div
+            className={`flex max-w-xl flex-col items-start gap-8 ${
+              ctaImage ? "text-panel px-6 py-8 md:px-10 md:py-12" : ""
             }`}
           >
-            Let&rsquo;s create your piece.
-          </h2>
-          <Link
-            href="/contact"
-            className="btn-glow inline-block bg-crimson px-8 py-3 text-sm tracking-wide text-cream"
-          >
-            Get in Touch
-          </Link>
+            <h2
+              className={`font-display text-4xl font-semibold leading-tight md:text-6xl ${
+                ctaImage ? "text-cream" : "text-ink"
+              }`}
+            >
+              Let&rsquo;s create your piece.
+            </h2>
+            <Link
+              href="/contact"
+              className="btn-glow inline-block bg-crimson px-8 py-3 text-sm tracking-wide text-cream"
+            >
+              Get in Touch
+            </Link>
+          </div>
         </Reveal>
       </section>
     </div>

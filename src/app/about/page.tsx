@@ -54,27 +54,28 @@ export default function AboutPage() {
         }`}
       >
         {storyImage && (
-          <>
-            <Image src={storyImage} alt="" fill priority className="-z-20 object-cover" />
-            <div className="photo-scrim absolute inset-0 -z-10" />
-          </>
+          <Image src={storyImage} alt="" fill priority className="-z-20 object-cover" />
         )}
         <div className="mx-auto w-full max-w-4xl">
           <Reveal>
-            <p
-              className={`text-xs uppercase tracking-[0.3em] ${
-                storyImage ? "text-scrim text-tan" : "text-crimson"
-              }`}
+            <div
+              className={`max-w-xl ${storyImage ? "text-panel px-6 py-8 md:px-10 md:py-12" : ""}`}
             >
-              About Us
-            </p>
-            <StaggerText
-              as="h1"
-              className={`font-display mt-4 block text-5xl font-semibold leading-[0.95] md:text-7xl ${
-                storyImage ? "text-scrim text-cream" : "text-ink"
-              }`}
-              text={`The story behind ${siteConfig.name}`}
-            />
+              <p
+                className={`text-xs uppercase tracking-[0.3em] ${
+                  storyImage ? "text-tan" : "text-crimson"
+                }`}
+              >
+                About Us
+              </p>
+              <StaggerText
+                as="h1"
+                className={`font-display mt-4 block text-5xl font-semibold leading-[0.95] md:text-6xl ${
+                  storyImage ? "text-cream" : "text-ink"
+                }`}
+                text={`The story behind ${siteConfig.name}`}
+              />
+            </div>
           </Reveal>
         </div>
       </section>
