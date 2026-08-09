@@ -60,15 +60,6 @@ body {
   -webkit-backdrop-filter: blur(18px);
 }
 
-/* Crimson neon bloom so the accent word still pops against the dark glass panel. */
-.text-glow {
-  text-shadow:
-    0 0 4px color-mix(in srgb, var(--color-crimson) 90%, white 30%),
-    0 0 18px color-mix(in srgb, var(--color-crimson) 95%, transparent),
-    0 0 42px color-mix(in srgb, var(--color-crimson) 70%, transparent),
-    0 0 80px color-mix(in srgb, var(--color-crimson) 40%, transparent);
-}
-
 body::after {
   content: "";
   position: fixed;

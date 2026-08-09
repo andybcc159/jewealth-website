@@ -70,10 +70,7 @@ export default function Home() {
               <StaggerText as="span" className="block" text="Jewelry that" />
               <span className="block">
                 <StaggerText as="span" text="tells your" delay={0.15} />{" "}
-                <RotatingWord
-                  words={["story", "legacy", "identity"]}
-                  wordClassName={heroImage ? "text-crimson text-glow" : "text-crimson"}
-                />
+                <RotatingWord words={["story", "legacy", "identity"]} />
               </span>
             </h1>
             <p className={`text-sm ${heroImage ? "text-cream/80" : "text-ink-soft"}`}>
