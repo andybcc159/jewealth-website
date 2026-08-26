@@ -65,9 +65,14 @@ export default function LinksPage() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <h1 className="font-logo mt-5 text-3xl font-semibold text-crimson">
-            {siteConfig.name}
-          </h1>
+          <h1 className="sr-only">{siteConfig.name}</h1>
+          <Image
+            src="/brand/wordmark.png"
+            alt={siteConfig.name}
+            width={144}
+            height={40}
+            className="mt-5 h-10 w-auto"
+          />
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">
             Bespoke Gem Jewelry in Bangkok · 10+ years experience
             <br />
