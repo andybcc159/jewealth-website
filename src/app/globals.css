@@ -41,6 +41,14 @@ body {
     0 0 30px 4px color-mix(in srgb, var(--color-crimson) 35%, transparent);
 }
 
+/* Thin ring with a soft ambient bloom around it — for framing a mark/logo
+   on plain backgrounds (not for text, which needs to stay legible). */
+.glow-ring {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-crimson) 25%, transparent),
+    0 0 36px 6px color-mix(in srgb, var(--color-crimson) 18%, transparent),
+    0 0 70px 18px color-mix(in srgb, var(--color-tan) 30%, transparent);
+}
+
 .elevate {
   box-shadow: 0 1px 2px color-mix(in srgb, var(--color-ink) 4%, transparent),
     0 10px 26px -12px color-mix(in srgb, var(--color-ink) 20%, transparent);

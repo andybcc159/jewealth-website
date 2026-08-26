@@ -51,14 +51,16 @@ export default function LinksPage() {
       <div className="mx-auto flex max-w-md flex-col items-center text-center">
         <Reveal>
           <h1 className="sr-only">{siteConfig.name}</h1>
-          <Image
-            src="/brand/wordmark.png"
-            alt={siteConfig.name}
-            width={144}
-            height={40}
-            className="mx-auto h-10 w-auto"
-          />
-          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+          <div className="glow-ring mx-auto flex w-fit items-center justify-center rounded-full border border-crimson/20 bg-cream px-9 py-5">
+            <Image
+              src="/brand/wordmark.png"
+              alt={siteConfig.name}
+              width={144}
+              height={40}
+              className="h-9 w-auto"
+            />
+          </div>
+          <p className="mt-6 text-sm leading-relaxed text-ink-soft">
             Bespoke Gem Jewelry in Bangkok · 10+ years experience
             <br />
             Pick your gems, crafted by masters — Platinum · Gold 9K/14K/18K · Silver
