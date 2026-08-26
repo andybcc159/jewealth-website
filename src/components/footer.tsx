@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FiMail } from "react-icons/fi";
 import { SiFacebook, SiInstagram, SiLine } from "react-icons/si";
 import { siteConfig } from "@/lib/site-config";
@@ -14,8 +15,14 @@ export default function Footer() {
     <footer className="border-t border-tan-deep/30 bg-cream-soft px-6 py-14">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="font-logo text-lg font-semibold text-crimson">{siteConfig.name}</p>
-          <p className="mt-2 text-sm text-ink-soft">{siteConfig.location}</p>
+          <Image
+            src="/brand/wordmark.png"
+            alt={siteConfig.name}
+            width={86}
+            height={24}
+            className="h-6 w-auto"
+          />
+          <p className="mt-3 text-sm text-ink-soft">{siteConfig.location}</p>
         </div>
 
         <div className="flex gap-3">

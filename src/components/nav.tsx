@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -12,12 +13,15 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-tan-deep/30 bg-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link
-          href="/"
-          className="font-logo text-2xl font-semibold tracking-wide text-crimson"
-          onClick={() => setOpen(false)}
-        >
-          {siteConfig.name}
+        <Link href="/" onClick={() => setOpen(false)}>
+          <Image
+            src="/brand/wordmark.png"
+            alt={siteConfig.name}
+            width={115}
+            height={32}
+            priority
+            className="h-8 w-auto"
+          />
         </Link>
 
         <nav className="hidden gap-8 md:flex">

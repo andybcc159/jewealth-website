@@ -23,6 +23,7 @@ const bodoni = Bodoni_Moda({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jewealth.co"),
   title: "Jewealth — Jewelry & Gems Curator",
   description:
     "Jewealth curates fine jewelry and gemstones with bespoke design — คิวเรทเครื่องประดับและอัญมณีคุณภาพสูง ออกแบบเฉพาะบุคคล",
