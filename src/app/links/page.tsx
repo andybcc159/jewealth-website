@@ -4,7 +4,6 @@ import { FiBookOpen } from "react-icons/fi";
 import { SiFacebook, SiInstagram, SiLine, SiShopee, SiTiktok } from "react-icons/si";
 import LinkButton from "@/components/link-button";
 import Reveal from "@/components/reveal";
-import { findImage } from "@/lib/media";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
@@ -47,33 +46,19 @@ const socials = [
 ];
 
 export default function LinksPage() {
-  const avatar = findImage("links", "profile");
-
   return (
     <div className="min-h-[80vh] px-6 py-16">
       <div className="mx-auto flex max-w-md flex-col items-center text-center">
         <Reveal>
-          <div className="relative h-24 w-24 overflow-hidden rounded-full border-2 border-crimson/30 bg-cream-soft">
-            {avatar ? (
-              <Image src={avatar} alt={siteConfig.name} fill className="object-cover" />
-            ) : (
-              <div className="flex h-full w-full items-center justify-center">
-                <span className="font-logo text-4xl font-semibold text-crimson">J</span>
-              </div>
-            )}
-          </div>
-        </Reveal>
-
-        <Reveal delay={0.05}>
           <h1 className="sr-only">{siteConfig.name}</h1>
           <Image
             src="/brand/wordmark.png"
             alt={siteConfig.name}
             width={144}
             height={40}
-            className="mt-5 h-10 w-auto"
+            className="mx-auto h-10 w-auto"
           />
-          <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+          <p className="mt-4 text-sm leading-relaxed text-ink-soft">
             Bespoke Gem Jewelry in Bangkok · 10+ years experience
             <br />
             Pick your gems, crafted by masters — Platinum · Gold 9K/14K/18K · Silver
