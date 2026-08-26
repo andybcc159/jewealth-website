@@ -20,8 +20,8 @@ export default function CataloguePage() {
       <section
         className={`relative overflow-hidden px-6 ${
           headerImage
-            ? "flex min-h-[360px] items-center py-24 md:min-h-[440px]"
-            : "py-24"
+            ? "flex min-h-[280px] items-center py-10 md:min-h-[340px]"
+            : "pb-6 pt-10"
         }`}
       >
         {headerImage && (
@@ -46,15 +46,12 @@ export default function CataloguePage() {
                 }`}
                 text="Design guide & catalogue"
               />
-              <p className={`mt-4 ${headerImage ? "text-cream/80" : "text-ink-soft"}`}>
-                คู่มือดีไซน์และแคตตาล็อกผลงานทั้งหมดของ Jewealth
-              </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      <div className="mx-auto max-w-4xl px-6 pb-24 pt-16">
+      <div className="mx-auto max-w-4xl px-6 pb-24 pt-4">
         {pages.length > 0 ? (
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             {pages.map((src, i) => (
