@@ -15,6 +15,7 @@ export const siteConfig = {
   address: "Jewelry Trade Center, Bangkok, Thailand",
   mapUrl: "https://maps.app.goo.gl/o88q9tUraM9vkBXJA",
   mapEmbedQuery: "13.7230779,100.5200978",
+  googleAnalyticsId: "G-Q77DN1TMCF",
 };
 
 export const navLinks = [
