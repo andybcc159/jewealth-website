@@ -27,11 +27,12 @@ const bodoni = Bodoni_Moda({
 
 const description =
   "Jewealth curates fine jewelry and gemstones with bespoke design in Bangkok — คิวเรทเครื่องประดับและอัญมณีคุณภาพสูง ออกแบบเครื่องประดับสั่งทำเฉพาะบุคคล ที่กรุงเทพฯ";
+const fullTitle = `${siteConfig.name} — ${siteConfig.tagline}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: "Jewealth — Jewelry & Gems Curator",
+    default: fullTitle,
     template: "%s — Jewealth",
   },
   description,
@@ -56,12 +57,12 @@ export const metadata: Metadata = {
     locale: "th_TH",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: "Jewealth — Jewelry & Gems Curator",
+    title: fullTitle,
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jewealth — Jewelry & Gems Curator",
+    title: fullTitle,
     description,
   },
   robots: {
