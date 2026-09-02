@@ -10,7 +10,7 @@ export const siteConfig = {
   lineUrl: "https://line.me/R/ti/p/@jewealth",
   instagram: "https://www.instagram.com/jewealth?igsh=MzJzNHI0dHdmZThq&utm_source=qr",
   facebook: "https://facebook.com/jewealth.official",
-  tiktok: "https://tiktok.com/@jewealth",
+  tiktok: "https://www.tiktok.com/@jewealth?is_from_webapp=1&sender_device=pc",
   shopee: "https://shopee.co.th/jewealth",
   location: "Bangkok, Thailand",
   address: "Jewelry Trade Center, Bangkok, Thailand",

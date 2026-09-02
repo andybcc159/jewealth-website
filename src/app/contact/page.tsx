@@ -1,9 +1,16 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { SiFacebook, SiInstagram, SiLine, SiTiktok } from "react-icons/si";
 import Reveal from "@/components/reveal";
 import StaggerText from "@/components/stagger-text";
 import { findImage } from "@/lib/media";
 import { siteConfig } from "@/lib/site-config";
+
+const socials = [
+  { label: "Instagram", href: siteConfig.instagram, Icon: SiInstagram },
+  { label: "Facebook", href: siteConfig.facebook, Icon: SiFacebook },
+  { label: "TikTok", href: siteConfig.tiktok, Icon: SiTiktok },
+];
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -73,7 +80,16 @@ export default function ContactPage() {
               <dt className="text-xs uppercase tracking-widest text-ink-soft/70">
                 LINE
               </dt>
-              <dd className="mt-1">{siteConfig.line}</dd>
+              <dd className="mt-1">
+                <a
+                  href={siteConfig.lineUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-crimson"
+                >
+                  {siteConfig.line}
+                </a>
+              </dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-widest text-ink-soft/70">
@@ -85,13 +101,20 @@ export default function ContactPage() {
               <dt className="text-xs uppercase tracking-widest text-ink-soft/70">
                 Social
               </dt>
-              <dd className="mt-1 flex gap-4">
-                <a href={siteConfig.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-crimson">
-                  Instagram
-                </a>
-                <a href={siteConfig.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-crimson">
-                  Facebook
-                </a>
+              <dd className="mt-1 flex gap-3">
+                {socials.map(({ label, href, Icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    title={label}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-tan-deep/40 text-ink-soft transition-colors hover:border-crimson hover:text-crimson"
+                  >
+                    <Icon size={16} />
+                  </a>
+                ))}
               </dd>
             </div>
           </dl>
