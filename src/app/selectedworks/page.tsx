@@ -5,10 +5,12 @@ import Reveal from "@/components/reveal";
 import StaggerText from "@/components/stagger-text";
 import { findImage } from "@/lib/media";
 import { getPortfolioItems } from "@/lib/portfolio";
-import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Selected Works — ${siteConfig.name}`,
+  title: "Selected Works",
+  description:
+    "ผลงานเครื่องประดับและแหวนพลอยสั่งทำจาก Jewealth — browse Jewealth's curated collection of bespoke jewelry and gemstone rings, handcrafted in Bangkok.",
+  alternates: { canonical: "/selectedworks" },
 };
 
 export default function SelectedWorksPage() {

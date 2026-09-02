@@ -4,7 +4,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/reveal";
 import { getPortfolioItem, getPortfolioSlugs } from "@/lib/portfolio";
-import { siteConfig } from "@/lib/site-config";
 
 export function generateStaticParams() {
   return getPortfolioSlugs().map((slug) => ({ slug }));
@@ -18,7 +17,15 @@ export async function generateMetadata({
   const { slug } = await params;
   const item = getPortfolioItem(slug);
   if (!item) return {};
-  return { title: `${item.title} — ${siteConfig.name}` };
+  return {
+    title: item.title,
+    description: `${item.description.slice(0, 140)}… Gemstone: ${item.gemstone}. Starting at ${item.startingPrice}.`,
+    alternates: { canonical: `/selectedworks/${item.slug}` },
+    openGraph:
+      item.images.length > 0
+        ? { images: [{ url: item.images[0] }] }
+        : undefined,
+  };
 }
 
 export default async function SelectedWorkDetailPage({

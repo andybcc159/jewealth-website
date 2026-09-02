@@ -6,7 +6,10 @@ import { findImage } from "@/lib/media";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Contact — ${siteConfig.name}`,
+  title: "Contact",
+  description:
+    "ติดต่อ Jewealth เพื่อปรึกษาและสั่งทำเครื่องประดับ — get in touch with Jewealth for bespoke jewelry consultations in Bangkok, via email, LINE, or Instagram.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

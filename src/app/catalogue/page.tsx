@@ -3,10 +3,12 @@ import Image from "next/image";
 import Reveal from "@/components/reveal";
 import StaggerText from "@/components/stagger-text";
 import { findImage, findImages } from "@/lib/media";
-import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Catalogue — ${siteConfig.name}`,
+  title: "Catalogue",
+  description:
+    "แคตตาล็อกและคู่มือดีไซน์เครื่องประดับจาก Jewealth — the full design guide and catalogue of Jewealth's custom-made jewelry and gemstone pieces.",
+  alternates: { canonical: "/catalogue" },
 };
 
 export default function CataloguePage() {

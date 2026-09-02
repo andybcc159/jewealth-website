@@ -1,5 +1,6 @@
 export const siteConfig = {
   name: "Jewealth",
+  url: "https://jewealth.co",
   tagline: "Jewelry & Gems Curator",
   taglineThai: "ผู้เชี่ยวชาญด้านการคัดสรรอัญมณีและรังสรรค์เครื่องประดับ มุ่งเน้นงานออกแบบสั่งทำพิเศษเฉพาะบุคคล ที่สะท้อนตัวตนและความประณีตในทุกรายละเอียด",
   description:

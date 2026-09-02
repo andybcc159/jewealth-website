@@ -7,7 +7,10 @@ import Reveal from "@/components/reveal";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `Links — ${siteConfig.name}`,
+  title: "Links",
+  description:
+    "ช่องทางการติดต่อและสั่งซื้อทั้งหมดของ Jewealth — every way to reach Jewealth: catalogue, LINE, Instagram, and Shopee.",
+  alternates: { canonical: "/links" },
 };
 
 const links = [

@@ -6,7 +6,10 @@ import { findImage, slugify } from "@/lib/media";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `About — ${siteConfig.name}`,
+  title: "About",
+  description:
+    "รู้จัก Jewealth ผู้เชี่ยวชาญด้านการคัดสรรอัญมณีและออกแบบเครื่องประดับสั่งทำเฉพาะบุคคลในกรุงเทพฯ — the story, values, and team behind Jewealth's bespoke jewelry.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

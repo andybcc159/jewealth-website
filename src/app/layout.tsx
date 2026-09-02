@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Cormorant_Garamond, Chakra_Petch, Bodoni_Moda } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/nav";
 import Footer from "@/components/footer";
+import JsonLd from "@/components/json-ld";
+import Nav from "@/components/nav";
 import { siteConfig } from "@/lib/site-config";
 
 const cormorant = Cormorant_Garamond({
@@ -24,11 +25,53 @@ const bodoni = Bodoni_Moda({
   weight: ["500", "600", "700"],
 });
 
+const description =
+  "Jewealth curates fine jewelry and gemstones with bespoke design in Bangkok — คิวเรทเครื่องประดับและอัญมณีคุณภาพสูง ออกแบบเครื่องประดับสั่งทำเฉพาะบุคคล ที่กรุงเทพฯ";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jewealth.co"),
-  title: "Jewealth — Jewelry & Gems Curator",
-  description:
-    "Jewealth curates fine jewelry and gemstones with bespoke design — คิวเรทเครื่องประดับและอัญมณีคุณภาพสูง ออกแบบเฉพาะบุคคล",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Jewealth — Jewelry & Gems Curator",
+    template: "%s — Jewealth",
+  },
+  description,
+  keywords: [
+    "Jewealth",
+    "custom jewelry Bangkok",
+    "bespoke jewelry Thailand",
+    "gemstone jewelry",
+    "sapphire ring",
+    "เครื่องประดับสั่งทำ",
+    "เครื่องประดับ กรุงเทพ",
+    "อัญมณี",
+    "แหวนพลอย",
+    "แหวนแถวปาจื่อ",
+  ],
+  authors: [{ name: siteConfig.name }],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "th_TH",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title: "Jewealth — Jewelry & Gems Curator",
+    description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jewealth — Jewelry & Gems Curator",
+    description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -42,6 +85,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${chakra.variable} ${bodoni.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
+        <JsonLd />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

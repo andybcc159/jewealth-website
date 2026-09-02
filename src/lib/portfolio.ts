@@ -42,7 +42,7 @@ const portfolioItemsInput: PortfolioItemInput[] = [
     categoryThai: "แหวน",
     startingPrice: "฿4,900",
     description:
-      "The Bazi Mixed Cut eternity ring from Jewealth is a high-end, custom-made jewelry masterpiece that seamlessly fuses ancient astrological wisdom with modern gem design—tailored to empower your personal energy while reflecting an undeniably sophisticated taste.",
+      "The Bazi stack ring from Jewealth layers slim, mix-cut sapphire bands into one custom-made set — designed to be worn together or apart, so you can build your own everyday stack rooted in Bazi astrology and finished to Jewealth's sophisticated standard.",
   },
 ];
 
