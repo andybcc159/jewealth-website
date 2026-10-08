@@ -55,6 +55,18 @@ const portfolioItemsInput: PortfolioItemInput[] = [
     startingPrice: "฿15,000",
     description: "Princess crown ring with Pink Sapphire ~0.5 ct",
   },
+  {
+    slug: "ballerinaruby",
+    title: "Ballerina ring featuring a hot pink Ruby",
+    titleThai: "แหวน custom ring",
+    gemstone: "Ruby",
+    availableSetting: "Silver92.5, 9K Gold, 14K Gold, 18K Gold, Platinum 950",
+    category: "Ring",
+    categoryThai: "แหวน",
+    startingPrice: "฿40,000",
+    description:
+      "0.68 ct Hot pink Ruby in 18K gold setting with Lab Grown Diamond",
+  },
 ];
 
 // Server-only: resolves each item's photos from public/selectedworks/<slug>/.
