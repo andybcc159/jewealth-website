@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import type { MouseEvent } from "react";
+import { formatPrice } from "@/lib/format";
 import type { PortfolioItem } from "@/lib/portfolio";
 
 export default function PortfolioCard({ item }: { item: PortfolioItem }) {
@@ -88,7 +89,7 @@ export default function PortfolioCard({ item }: { item: PortfolioItem }) {
                 Starting At
               </span>
               <span className="text-sm font-medium text-crimson">
-                {item.startingPrice}
+                {formatPrice(item.startingPrice)}
               </span>
             </div>
           </div>

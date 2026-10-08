@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/reveal";
+import { formatPrice } from "@/lib/format";
 import { getPortfolioItem, getPortfolioSlugs } from "@/lib/portfolio";
 
 export function generateStaticParams() {
@@ -23,7 +24,7 @@ export async function generateMetadata({
       : `${item.description}.`;
   return {
     title: item.title,
-    description: `${summary} Gemstone: ${item.gemstone}. Starting at ${item.startingPrice}.`,
+    description: `${summary} Gemstone: ${item.gemstone}. Starting at ${formatPrice(item.startingPrice)}.`,
     alternates: { canonical: `/selectedworks/${item.slug}` },
     openGraph:
       item.images.length > 0
@@ -107,7 +108,7 @@ export default async function SelectedWorkDetailPage({
               <dt className="text-xs uppercase tracking-widest text-ink-soft/60">
                 Starting Price
               </dt>
-              <dd className="mt-1 text-lg font-medium text-crimson">{item.startingPrice}</dd>
+              <dd className="mt-1 text-lg font-medium text-crimson">{formatPrice(item.startingPrice)}</dd>
             </div>
             <div>
               <dt className="text-xs uppercase tracking-widest text-ink-soft/60">Details</dt>
