@@ -17,9 +17,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const item = getPortfolioItem(slug);
   if (!item) return {};
+  const summary =
+    item.description.length > 140
+      ? `${item.description.slice(0, 140)}…`
+      : `${item.description}.`;
   return {
     title: item.title,
-    description: `${item.description.slice(0, 140)}… Gemstone: ${item.gemstone}. Starting at ${item.startingPrice}.`,
+    description: `${summary} Gemstone: ${item.gemstone}. Starting at ${item.startingPrice}.`,
     alternates: { canonical: `/selectedworks/${item.slug}` },
     openGraph:
       item.images.length > 0

@@ -44,6 +44,17 @@ const portfolioItemsInput: PortfolioItemInput[] = [
     description:
       "The Bazi stack ring from Jewealth layers slim, mix-cut sapphire bands into one custom-made set — designed to be worn together or apart, so you can build your own everyday stack rooted in Bazi astrology and finished to Jewealth's sophisticated standard.",
   },
+  {
+    slug: "princesscrownring",
+    title: "Princess crown ring with Pink Sapphire",
+    titleThai: "แหวนมงกุฏเจ้าหญิง",
+    gemstone: "Pink sapphire",
+    availableSetting: "Silver92.5, 9K Gold, 14K Gold, 18K Gold, Platinum 950",
+    category: "Ring",
+    categoryThai: "แหวน",
+    startingPrice: "฿15,000",
+    description: "Princess crown ring with Pink Sapphire ~0.5 ct",
+  },
 ];
 
 // Server-only: resolves each item's photos from public/selectedworks/<slug>/.
