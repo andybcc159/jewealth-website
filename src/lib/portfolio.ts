@@ -67,6 +67,17 @@ const portfolioItemsInput: PortfolioItemInput[] = [
     description:
       "0.68 ct Hot pink Ruby in 18K gold setting with Lab Grown Diamond",
   },
+  {
+    slug: "eternityfancysapphire",
+    title: "Eternity fancy sapphire ring",
+    titleThai: "แหวนรอบวง fancy sapphire",
+    gemstone: "Sapphire",
+    availableSetting: "Silver92.5, 9K Gold, 14K Gold, 18K Gold, Platinum 950",
+    category: "Ring",
+    categoryThai: "แหวน",
+    startingPrice: "฿42,000",
+    description: "Baguette 5*3 mm Fancy color Sapphire in 9K gold setting",
+  },
 ];
 
 // Server-only: resolves each item's photos from public/selectedworks/<slug>/.
