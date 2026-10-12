@@ -78,6 +78,17 @@ const portfolioItemsInput: PortfolioItemInput[] = [
     startingPrice: "฿42,000",
     description: "Baguette 5*3 mm Fancy color Sapphire in 9K gold setting",
   },
+  {
+    slug: "nigeriaemerald",
+    title: "Nigeria Emerald ring",
+    titleThai: "แหวนชูเพชรข้าง",
+    gemstone: "Nigeria Emerald",
+    availableSetting: "Silver92.5, 9K Gold, 14K Gold, 18K Gold, Platinum 950",
+    category: "Ring",
+    categoryThai: "แหวน",
+    startingPrice: "฿20,000",
+    description: "Nigeria Emerald with Silver92.5 setting-18K gold plated",
+  },
 ];
 
 // Server-only: resolves each item's photos from public/selectedworks/<slug>/.
