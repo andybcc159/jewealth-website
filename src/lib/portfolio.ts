@@ -89,6 +89,18 @@ const portfolioItemsInput: PortfolioItemInput[] = [
     startingPrice: "฿20,000",
     description: "Nigeria Emerald with Silver92.5 setting-18K gold plated",
   },
+  {
+    slug: "supersantamaria",
+    title: "Super Santa Maria Solitaire",
+    titleThai: "แหวนชูเพชรข้างธรรมชาติ",
+    gemstone: "Aquamarine (Santa Maria)",
+    availableSetting: "Silver92.5, 9K Gold, 14K Gold, 18K Gold, Platinum 950",
+    category: "Ring",
+    categoryThai: "แหวน",
+    startingPrice: "฿110,000",
+    description:
+      "Aquamarine (Santa Maria) ~6 ct with 18K gold setting + 1.4 ct Natural Diamond side stone",
+  },
 ];
 
 // Server-only: resolves each item's photos from public/selectedworks/<slug>/.
