@@ -69,6 +69,16 @@ export default function LinksPage() {
             Pick your gems, crafted by masters — Platinum · Gold 9K/14K/18K · Silver
             <br />
             ✈️ Worldwide Shipping
+            <br />
+            Line :{" "}
+            <a
+              href={siteConfig.lineUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-ink hover:text-crimson"
+            >
+              {siteConfig.line}
+            </a>
           </p>
         </Reveal>
 
